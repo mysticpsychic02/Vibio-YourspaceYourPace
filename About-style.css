@@ -1,0 +1,147 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(85, 77, 77, 0.9); /* Darker background color */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: rgba(85, 77, 77, 0.9);
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+header h3 {
+    margin: 0;
+    font-size: 16px;
+    color: #f0e68c; /* Light color for subtitle */
+}
+
+header form {
+    margin: 0;
+}
+
+header input[type="text"], header input[type="submit"] {
+    padding: 10px;
+    border-radius: 25px;
+    border: none; /* Remove border */
+    margin-left: 10px; /* Space between input and submit */
+}
+
+header input[type="submit"] {
+    background-color: #ff6347; /* Button color */
+    color: white; /* Button text color */
+    cursor: pointer; /* Pointer on hover */
+}
+
+header input[type="submit"]:hover {
+    background-color: #8d2600; /* Darker color on hover */
+}
+
+nav {
+    text-align: center;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+    margin: 0 15px; /* Space between buttons */
+    padding: 10px 15px; /* Padding for buttons */
+    background-color: #ff6347; /* Button color */
+    color: white; /* Button text color */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+}
+
+nav a:hover {
+    background-color: #8c2500; /* Darker color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between; /* Pushes left and right sides to their respective edges */
+    max-width: 100%;
+    margin: 20px auto;
+    gap: 5px;
+    padding: 0 5px; /* Add padding for spacing on both sides */
+}
+
+.left-side {
+    flex: 4; /* Increase left side width */
+    padding: 20px; /* Adjust padding */
+    background: linear-gradient(135deg, rgba(225, 225, 225, 0.8), rgba(225, 225, 225, 0.959));
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    margin-left: 0; /* Aligns to the left */
+    overflow: hidden; /* Prevent scrolling */
+    font-size: 23px;
+    
+}
+
+
+.right-side {
+    flex: 0.4; /* Further reduce right side width */
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 0; /* Aligns to the right */
+    text-align: left;
+    min-height: 300px; /* Set a minimum height to ensure it’s taller than the left side */
+    position: relative; /* Allow positioning of buttons */
+}
+
+.right-side button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 15px;
+    border: none;
+    background-color: #ff6347;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow to buttons */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+    position: sticky; /* Keep the button in view */
+    top: 10px; /* Position from the top */
+}
+
+.right-side button:hover {
+    background-color: #8d2600; /* Darker color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    margin: 0;
+}

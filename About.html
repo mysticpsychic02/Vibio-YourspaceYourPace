@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vibio - YOUR SPACE, YOUR PACE</title>
+    <link rel="icon" href="C:/Users/prana/OneDrive/Desktop/Your pace your space/Vibio.ico" type="image/x-icon">
+    <link rel="stylesheet" href="About-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <script>
+        function searchStories(event) {
+        event.preventDefault(); // Prevents form submission
+        const query = document.querySelector('input[name="search"]').value.trim().toLowerCase();
+        if (query) {
+        // Redirect to stories page with the query parameter
+        window.location.href = `stories.html?search=${encodeURIComponent(query)}`;
+         }
+     }
+
+    </script>
+    
+</head>
+<body>
+
+<header>
+    <img src="Vibio.png" alt="Website Logo" style="width: 50px; height: 50px; margin-right: 15px;">
+    <h1>Vibio - Your Space at Your own Pace</h1>
+    <h3>Your community for sharing stories and feelings</h3> <!-- Subtitle -->
+    <form onsubmit="searchStories(event)">
+        <input type="text" name="search" placeholder="Search for anything..." id="searchBar">
+        <input type="submit" value="Go">
+    </form>
+    
+</header>
+
+<nav>
+    <a href="Home.html"><i class="fas fa-home"></i> Home</a>
+    <a href="stories.html"><i class="fas fa-book-open"></i> Stories</a>
+    <a href="Contact.html"><i class="fas fa-envelope"></i> Contact</a>
+</nav>
+
+<div class="main-content">
+    <div class="left-side">
+        <h2>About us!</h2>
+        <p>Have you ever caught yourself wondering, “Is it just me?” or “Do others feel this way?” I know I have. 
+            We often wonder if anyone else shares our questions, thoughts, or experiences, yet there’s rarely a 
+            place to find out. Social media seems dominated by famous faces and trending personalities, but what
+            about the stories of everyday people who aren’t in the spotlight?<br>
+            
+            Picture a place where anyone, no matter who they are, can share their real experiences—not as therapy 
+            or a place to vent, but as a resource for insight and connection. This is about building a practical 
+            knowledge base of diverse stories and perspectives that can give us a new way to see things or maybe 
+            even solve a problem.<br>
+            
+            Imagine scrolling through a range of experiences—about challenges, milestones, unexpected life lessons—from 
+            people who might be your neighbors or live on the other side of the world. Every story here has value, not for 
+            therapy but for creating a network of shared, relatable experiences.<br>
+            
+            This is a space where your voice adds to a collective of everyday insights. Maybe someone will read your story and 
+            feel a connection; maybe you’ll gain something from theirs. Together, we’re creating a community where everyone’s 
+            experience counts. This isn’t a space for emotional unpacking; it’s a place to exchange real perspectives that remind 
+            us all we’re part of a bigger story.<br>
+        </p>
+        
+    </div>
+    <div class="right-side">
+        <h2>Appearance</h2>
+        <p>Adjust font size here:</p>
+        <div class="button-container">
+            <button onclick="adjustFontSize('increase')"><i class="fas fa-plus"></i> Increase</button>
+            <button onclick="adjustFontSize('decrease')"><i class="fas fa-minus"></i> Decrease</button>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; Vibio - Your Pace Your Space. All Rights Reserved.</p>
+</footer>
+
+<script>
+    function adjustFontSize(action) {
+        const body = document.body; // Target the entire body
+        const rightSide = document.querySelector('.right-side'); // Select the right side
+        const contentElements = body.querySelectorAll('h1, h2, h3, p'); // Select all relevant text elements
+    
+        // Adjust the font size for all content elements except those in the right side
+        contentElements.forEach(element => {
+            if (!rightSide.contains(element)) { // Check if the element is not inside the right side
+                let currentSize = parseFloat(window.getComputedStyle(element).fontSize);
+    
+                if (action === 'increase') {
+                    element.style.fontSize = (currentSize + 2) + 'px';
+                } else if (action === 'decrease') {
+                    element.style.fontSize = (currentSize - 2) + 'px';
+                }
+            }
+        });
+    }
+    
+    
+    </script>
+
+<script>
+    document.getElementById("searchBar").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            performSearch();
+        }
+    });
+    
+    function performSearch() {
+        const searchQuery = document.getElementById("searchBar").value.trim().toLowerCase();
+        if (!searchQuery) return;  // If search bar is empty, do nothing
+    
+        // Redirect to the stories page with the search query in the URL
+        window.location.href = `stories.html?search=${encodeURIComponent(searchQuery)}`;
+    }
+    </script>
+</body>
+</html>
+ 

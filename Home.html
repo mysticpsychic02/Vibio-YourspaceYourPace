@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Vibio</title>
+    <link rel="icon" href="C:/Users/prana/OneDrive/Desktop/Your pace your space/Vibio.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Font Awesome -->
+    <script>
+        function searchStories(event) {
+        event.preventDefault(); // Prevents form submission
+        const query = document.querySelector('input[name="search"]').value.trim().toLowerCase();
+        if (query) {
+        // Redirect to stories page with the query parameter
+        window.location.href = `stories.html?search=${encodeURIComponent(query)}`;
+         }
+     }
+
+    </script>
+    
+</head>
+<body>
+
+<header>
+    <img src="Vibio.png" alt="Website Logo" style="width: 50px; height: 50px; margin-right: 15px;">
+    <h1>Vibio - Your Space at Your own Pace</h1>
+    <h3>Your community for sharing stories and feelings</h3> <!-- Subtitle -->
+    <form onsubmit="searchStories(event)">
+        <input type="text" name="search" placeholder="Search for anything..." id="searchBar">
+        <input type="submit" value="Go">
+    </form>
+    
+    
+</header>
+
+<nav>
+    <a href="stories.html"><i class="fas fa-book-open"></i> Stories</a> <!-- Link to Stories page -->
+    <a href="about.html"><i class="fas fa-info-circle"></i> About</a> <!-- Update to the correct About page -->
+    <a href="contact.html"><i class="fas fa-envelope"></i> Contact</a> <!-- Update to the correct Contact page -->
+
+</nav>
+
+
+<div class="main-content">
+    <div class="left-side">
+        <h2>Welcome to Vibio!</h2>
+        <p>Forget the usual intros. I’m here to address something straightforward but often overlooked: people live unique 
+            lives with insights and experiences worth sharing, yet many of these stories go unheard. For a long time, I assumed
+             the world didn’t care much about what individuals had to say unless they were already in the spotlight. But the more 
+             I looked around, the more I realized the potential of everyday voices to shape new perspectives.<br>
+            
+            Imagine a platform—a place where anyone, regardless of background, can share what they’ve learned from life. 
+            This isn’t about therapy or venting emotions; it’s about contributing real experiences that others might find useful,
+            thought-provoking, or inspiring. Just like Wikipedia, but filled with personal insights, lessons, and practical knowledge
+            from real people.<br>
+          
+            The goal? A community that thrives on shared wisdom and diverse perspectives. No one needs to be a professional or a
+            public figure to add something meaningful. Whether you choose to stay anonymous or not, every voice counts. Let’s build
+            a place where everyone can add to a collective bank of experiences that others can learn from and connect with.<br>
+        </p>
+    </div>
+    <div class="right-side">
+        <h2>Appearance</h2>
+        <p>Adjust font size here:</p>
+        <div class="button-container">
+            <button onclick="adjustFontSize('increase')"><i class="fas fa-plus"></i> Increase</button>
+            <button onclick="adjustFontSize('decrease')"><i class="fas fa-minus"></i> Decrease</button>
+        </div>
+    </div>
+</div>
+
+<div class="additional-boxes">
+    <div class="box">
+        <h3>Share Your Story</h3>
+        <p>Join our community and express your thoughts and feelings in a safe environment.</p>
+    </div>
+    <div class="box">
+        <h3>Join the Community</h3>
+        <p>Connect with others who understand and support you. Together, we grow stronger!</p>
+    </div>
+    <div class="box">
+        <h3>Get Inspired</h3>
+        <p>Read stories from others, share experiences, and find motivation to express yourself.</p>
+    </div>
+</div>
+
+<div class="additional-boxes">
+    <div class="box new-design">
+        <img src="Shirley_Chisholm.jpg" alt="Shirley Chisholm" style="width: 120px; height: 120px; margin-right: 10px; float: left;">
+        <h3>Shirley Shiholm</h3>
+        <p>On October 29, 1973, Shirley Chisholm made history by being sworn in as the first Black woman elected to the United States Congress. 
+            Representing New York's 12th congressional district, she brought her passionate advocacy for marginalized communities to the forefront of American politics. 
+            Throughout her tenure, Chisholm fought for issues such as education, healthcare, and civil rights, becoming a formidable voice against racism and sexism in politics. 
+            Her groundbreaking election marked a significant milestone in the struggle for representation, inspiring future generations of women and people of color to pursue political 
+            office and advocate for social justice.</p>
+    </div>
+    <div class="box new-design">
+        <img src="John_D_MacDonald.jpg" alt="John D MacDonald" style="width: 120px; height: 120px; margin-right: 10px; float: left;">
+        <h3>John D.MacDonald</h3>
+        <p>On October 29, 1969, John D. MacDonald published <b>The Deep Blue Good-By</b>, the first book in his celebrated Travis McGee series. This novel introduced readers to the character of Travis McGee, 
+            a salvage consultant who resides on a houseboat in Fort Lauderdale, and set the tone for a series that would explore themes of morality, justice, and social issues. MacDonald, born on July 24, 1916, 
+            in Sharon, Pennsylvania, was a prolific author who penned over 70 novels and numerous short stories throughout his career. His writing is characterized by engaging plots and a deep understanding of human
+             nature, making him a significant figure in the thriller genre. The Travis McGee series combined elements of mystery and adventure, while also providing social commentary on contemporary issues such as
+              consumerism and environmentalism. Although MacDonald was highly regarded by his peers and received several accolades, including the prestigious Edgar Award, he remains somewhat underappreciated in
+               mainstream literary discussions. His innovative approach to crime fiction and the creation of a compelling protagonist have left a lasting impact on the genre, influencing countless authors who 
+               followed in his footsteps.</p>
+    </div>
+    <div class="box new-design">
+        <img src="K. R. Narayanan.jpg" alt="K. R. Narayanan" style="width: 120px; height: 120px; margin-right: 10px; float: left;">
+        <h3>K. R. Narayanan</h3>
+        <p>On October 29, 1949, K. R. Narayanan was born in Kerala, India, and later became the first Dalit President of India, serving from 1997 to 2002. Rising from humble beginnings, 
+            he had a distinguished career in diplomacy and politics, including roles as India's Ambassador to the United States and Minister for External Affairs. Known for his commitment
+             to social justice and education, Narayanan advocated for the rights of marginalized communities and focused on national unity during his presidency. Though not widely recognized outside of India, 
+             his legacy as a champion for equality and representation continues to inspire many.</p>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; Vibio - Your Pace Your Space. All Rights Reserved.</p>
+</footer>
+
+
+<script>
+function adjustFontSize(action) {
+    const body = document.body; // Target the entire body
+    const rightSide = document.querySelector('.right-side'); // Select the right side
+    const contentElements = body.querySelectorAll('h1, h2, h3, p'); // Select all relevant text elements
+
+    // Adjust the font size for all content elements except those in the right side
+    contentElements.forEach(element => {
+        if (!rightSide.contains(element)) { // Check if the element is not inside the right side
+            let currentSize = parseFloat(window.getComputedStyle(element).fontSize);
+
+            if (action === 'increase') {
+                element.style.fontSize = (currentSize + 2) + 'px';
+            } else if (action === 'decrease') {
+                element.style.fontSize = (currentSize - 2) + 'px';
+            }
+        }
+    });
+}
+
+
+</script>
+<script>
+    document.getElementById("searchBar").addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            performSearch();
+        }
+    });
+    
+    function performSearch() {
+        const searchQuery = document.getElementById("searchBar").value.trim().toLowerCase();
+        if (!searchQuery) return;  // If search bar is empty, do nothing
+    
+        // Redirect to the stories page with the search query in the URL
+        window.location.href = `stories.html?search=${encodeURIComponent(searchQuery)}`;
+    }
+    </script>
+</body>
+</html>
