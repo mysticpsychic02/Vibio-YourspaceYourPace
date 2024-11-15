@@ -53,9 +53,24 @@ header input[type="submit"]:hover {
     background-color: #8d2600; /* Darker color on hover */
 }
 
-nav {
+.fixed-nav {
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays on top of other elements */
+  }
+  
+  .nav-buttons {
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+  }
+  
+
+  nav {
     text-align: center;
-    background-color: #fff;
+    background-color: rgba(156, 142, 142, 0.5); /* Semi-transparent background */
     padding: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
